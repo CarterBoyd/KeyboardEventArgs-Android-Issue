@@ -1,7 +1,10 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<textarea @onkeydown="function" />
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    private static void function(KeyboardEventArgs e)
+    {
+        Console.WriteLine($"e.Code:\t{e.Code}\ne.Key:\t{e.Key}");
+    }
+}
